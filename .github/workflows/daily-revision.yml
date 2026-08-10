@@ -1,0 +1,85 @@
+name: Daily Interview Revision
+
+on:
+  schedule:
+    - cron: "30 12 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  daily-revision:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate daily revision
+        shell: bash
+        run: |
+          DATE=$(date '+%d %B %Y')
+          DAY=$(date '+%u')
+
+          case $DAY in
+            1)
+              TOPIC="JavaScript"
+              FILE="interview-questions/javascript.md"
+              ;;
+            2)
+              TOPIC="React"
+              FILE="interview-questions/react.md"
+              ;;
+            3)
+              TOPIC=".NET"
+              FILE="interview-questions/dotnet.md"
+              ;;
+            4)
+              TOPIC="SQL"
+              FILE="interview-questions/sql.md"
+              ;;
+            5)
+              TOPIC="Backend Development"
+              FILE="interview-questions/backend.md"
+              ;;
+            6)
+              TOPIC="React + JavaScript Revision"
+              FILE="interview-questions/react.md"
+              ;;
+            7)
+              TOPIC="Weekly Revision"
+              FILE="interview-questions/javascript.md"
+              ;;
+          esac
+
+          {
+            echo ""
+            echo "## $DATE"
+            echo ""
+            echo "### Topic"
+            echo "$TOPIC"
+            echo ""
+            echo "### Revision Material"
+            echo ""
+            echo "Today's revision was generated from:"
+            echo "\`$FILE\`"
+            echo ""
+            echo "### Focus"
+            echo "- Review the interview questions"
+            echo "- Understand the concepts"
+            echo "- Practice explaining the answers"
+            echo ""
+            echo "---"
+          } >> daily-log/README.md
+
+      - name: Commit daily revision
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add daily-log/README.md
+
+          git commit -m "docs: update daily interview revision" || exit 0
+
+          git push
