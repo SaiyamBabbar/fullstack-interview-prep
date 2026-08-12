@@ -55,3 +55,20 @@ Today's revision was generated from:
 - Practice explaining the answers
 
 ---
+
+## 12 August 2026
+
+### Topic
+.NET
+
+### Revision Material
+
+Today's revision was generated from:
+`interview-questions/dotnet.md`
+
+### Focus
+- Review the interview questions
+- Understand the concepts
+- Practice explaining the answers
+
+---
