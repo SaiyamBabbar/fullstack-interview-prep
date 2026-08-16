@@ -123,3 +123,20 @@ Today's revision was generated from:
 - Practice explaining the answers
 
 ---
+
+## 16 August 2026
+
+### Topic
+Weekly Revision
+
+### Revision Material
+
+Today's revision was generated from:
+`interview-questions/javascript.md`
+
+### Focus
+- Review the interview questions
+- Understand the concepts
+- Practice explaining the answers
+
+---
