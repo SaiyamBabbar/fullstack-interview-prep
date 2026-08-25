@@ -276,3 +276,20 @@ Today's revision was generated from:
 - Practice explaining the answers
 
 ---
+
+## 25 August 2026
+
+### Topic
+React
+
+### Revision Material
+
+Today's revision was generated from:
+`interview-questions/react.md`
+
+### Focus
+- Review the interview questions
+- Understand the concepts
+- Practice explaining the answers
+
+---
