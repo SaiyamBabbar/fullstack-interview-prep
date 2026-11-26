@@ -1857,3 +1857,20 @@ Today's revision was generated from:
 - Practice explaining the answers
 
 ---
+
+## 26 November 2026
+
+### Topic
+SQL
+
+### Revision Material
+
+Today's revision was generated from:
+`interview-questions/sql.md`
+
+### Focus
+- Review the interview questions
+- Understand the concepts
+- Practice explaining the answers
+
+---
